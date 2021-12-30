@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+      overflow-y: hidden;
+      margin:0;
+      padding: 0;
+      font-family: verdana;
+      background-color: #919191;
+    }
+    input{
+      margin: 10px;
+      text-align:right;
+    }
+    p{
+      text-align:center;
+      margin: 50px auto;
+      margin-top: 10px;
+      padding: 10px;
+      font-weight: bold;
+      color: #0101A6;
+      font-family: verdana;
+      background-color: #0096FF;
+      border-radius: 20px;
+    }
+    div{
+        text-align: center;
+        height: 100%;
+    }
+    </style>
+</head>
+<body>
+        <p>Just Chat</p>
+    <div class="keluaran">
+
+    </div><br>
+    <div>
+        <input type="text" class="masukkan">
+        <button class="chat">Kirim</button>
+    </div>
+
+    <script>
+        let keluaranChat = document.querySelector(".keluaran");
+        const masukkanChat = document.querySelector(".masukkan");
+        const chat = document.querySelector(".chat");
+
+        chat.addEventListener("click", function(){
+            keluaranChat.innerHTML = keluaranChat.innerHTML + "<br>" + masukkanChat.value + "<br>";
+            masukkanChat.value = "";
+        })
+    </script>
+</body>
+</html>

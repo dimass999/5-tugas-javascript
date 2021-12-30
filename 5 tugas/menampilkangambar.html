@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Javascript - Dimas Anggoro Harahap</title>
+    <style>
+    body{
+      overflow-y: hidden;
+      margin:0;
+      padding: 0;
+      font-family: verdana;
+      background-color: #919191;
+      text-align: center;
+    }
+    input{
+      margin: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <select onchange="change()" id="satu">
+            <option>Pilih Hewan Yang Kamu Suka</option>
+            <option value="harimau">harimau</option>
+            <option value="monyet">monyet</option>
+            <option value="kucing">kucing</option>
+            <option value="burung">burung</option>
+            <option value="ular">ular</option>
+        </select>
+    </div><br>
+        <img src="" alt="" id="dua" width="400px"><br>
+
+<script>
+    function change(){
+        let img = document.getElementById("satu").value
+        let image = document.getElementById("dua")
+        if(img == "harimau"){
+           image.src = "harimau.jpg"
+            alert ("Ini Gambar harimau")
+        }else if(img == "monyet"){
+            image.src = "monyet.jpg"
+            alert ("Ini adalah Gambar monyet")
+        }else if(img == "kucing"){
+            image.src = "kucing.jpg"
+            alert ("Ini adalah Gambar kucing")
+        }else if(img == "burung"){
+            image.src = "burung.jpg"
+            alert ("Ini adalah Gambar burung")
+        }else if(img == "ular") {
+            image.src = "ular.jpg"
+            alert("Ini adalah Gambar ular")
+        }    
+    }
+</script>
+
+</body>
+</html>

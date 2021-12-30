@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 5</title>
+    <style>
+        span {
+            visibility: hidden;
+            color:red;
+        }
+        body{
+      text-align: center;
+      overflow-y: hidden;
+      margin:0;
+      padding: 0;
+      font-family: verdana;
+      background-color: #919191;
+    }
+    input{
+      margin: 10px;
+      text-align:right;
+    }
+    p{
+      text-align:center;
+      margin: 50px auto;
+      margin-top: 10px;
+      padding: 10px;
+      font-weight: bold;
+      color: #0101A6;
+      font-family: verdana;
+      background-color: #0096FF;
+      border-radius: 20px;
+    }
+    </style>
+</head>
+<body>
+    <p>Verifikasi DUlu...</p>
+    <input type="text" id="nama" placeholder="Masukkan Nama" maxlength="30" minlength="3"><br>
+    <span>Nama Tidak boleh kosong</span>
+    <br>
+    <input type="email" id="email" placeholder="Masukkan Email" ><br>
+    <span>Email Tidak boleh kosong</span>
+    <br>
+    <input type="time" id="waktu" placeholder="Masukkan Waktu"><br>
+    <span>Jam keberangkatan Tidak boleh kosong</span>
+    <br>
+    <input type="text" id="tujuan" placeholder="Masukkan Tujuan"><br>
+    <span>Tujuan keberangkatan Tidak boleh kosong</span>
+    <br>
+    <input type="number" id="jumlah" placeholder="Masukkan Jumlah"><br>
+    <span>Jumlah tiket Tidak boleh kosong</span>
+    <br>
+
+    <button onclick="validasi()">Submit</button>
+    <div id="hasil"></div>
+
+    <script>
+        let nama = document.getElementById("nama")
+        let email = document.getElementById("email")
+        let waktu = document.getElementById("waktu")
+        let tujuan = document.getElementById("tujuan")
+        let jumlah = document.getElementById("jumlah")
+        let span = document.getElementsByTagName("span")
+        let hasil = document.getElementById("hasil")
+        function validasi() {
+            if (nama.value == "" || nama.value.length >= 30) {
+                span[0].style.visibility = "visible"
+            } else {
+                hasil.innerHTML += nama.value + "<br>"
+            }
+            if (email.value == "" || email.value.length >= 30) {
+                span[1].style.visibility = "visible"
+            } else {
+                hasil.innerHTML += email.value + "<br>"
+            }
+            if (waktu.value == "" || waktu.value.length >= 30) {
+                span[2].style.visibility = "visible"
+            } else {
+                hasil.innerHTML += waktu.value + "<br>"
+            }
+            if (tujuan.value == "" || tujuan.value.length >= 30) {
+                span[3].style.visibility = "visible"
+            } else {
+                hasil.innerHTML += tujuan.value + "<br>"
+            }
+            if (jumlah.value == "" || jumlah.value.length >= 30) {
+                span[4].style.visibility = "visible"
+            } else {
+                hasil.innerHTML += jumlah.value + "<br>"
+            }
+        }
+    </script>
+</body>
+</html>
